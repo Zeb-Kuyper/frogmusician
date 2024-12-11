@@ -1,0 +1,9 @@
+# .gitignore
+__pycache__/
+.env
+.venv/
+*.pyc
+models/
+MERT-v1-95M/
+songs/
+downloads/
