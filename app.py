@@ -322,6 +322,7 @@ def process_songs_directory(songs_dir="songs", output_dir="analysis_output"):
             print(f"\nAnalyzing: {audio_file.name}")
             results = analyzer.analyze_audio(str(audio_file))
             analyzer.save_to_excel(results, audio_file.stem, output_dir)
+            analyzer.visualize_results(results, output_dir, audio_file.name, output_dir)
         except Exception as e:
             print(f"Error processing {audio_file.name}: {str(e)}")
             continue
